@@ -5,14 +5,6 @@
 <h1 style="font-size: 3em; margin-bottom: 0;">❄️ PROJECT AKUREYRI</h1>
 <h3 style="color: #60efff; margin-top: 0;">Protocolo de Despliegue Romántico v1.0.0</h3>
 
-<!-- BADGES -->
-
-<p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/STATUS-ENAMORADO-ff3366%3Fstyle%3Dfor-the-badge%26logo%3Dheart%26logoColor%3Dwhite" alt="Status" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/ENVIRONMENT-ICELAND-00ff87%3Fstyle%3Dfor-the-badge%26logo%3Dlinux%26logoColor%3Dblack" alt="Environment" />
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/UPTIME-FOREVER-60efff%3Fstyle%3Dfor-the-badge%26logo%3Dclock%26logoColor%3Dblack" alt="Uptime" />
-</p>
-
 <p align="center" style="max-width: 600px; line-height: 1.6;">
 <i>Una solución <b>Full-Stack</b> de alta disponibilidad para orquestar la propuesta más importante del año.
 
