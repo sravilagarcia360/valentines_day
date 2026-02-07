@@ -164,5 +164,5 @@ async function getAkureyriPromise(): Promise<string> {
 <!-- FOOTER -->
 
 <div align="center">
-<p><b>SrBass.dev</b></p>
-<p>Copyright © 2024 - Forever. Todos los derechos reservados.
+<p><b>SrAvila.dev</b></p>
+
