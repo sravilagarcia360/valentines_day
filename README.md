@@ -44,7 +44,7 @@ El objetivo del despliegue es ejecutar un <code>POST request</code> al endpoint 
 <table align="center" style="border: none;">
 <tr>
 <td align="center" width="150">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/HTML5-E34F26%3Fstyle%3Dflat-square%26logo%3Dhtml5%26logoColor%3Dwhite" alt="HTML5" />
+<img alt="HTML5" />
 
 
 
@@ -52,7 +52,7 @@ El objetivo del despliegue es ejecutar un <code>POST request</code> al endpoint 
 <b>Frontend</b>
 </td>
 <td align="center" width="150">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Tailwind_CSS-38B2AC%3Fstyle%3Dflat-square%26logo%3Dtailwind-css%26logoColor%3Dwhite" alt="Tailwind" />
+<img alt="Tailwind" />
 
 
 
@@ -60,7 +60,7 @@ El objetivo del despliegue es ejecutar un <code>POST request</code> al endpoint 
 <b>Estilos</b>
 </td>
 <td align="center" width="150">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/JavaScript-F7DF1E%3Fstyle%3Dflat-square%26logo%3Djavascript%26logoColor%3Dblack" alt="JS" />
+<img  alt="JS" />
 
 
 
@@ -68,7 +68,7 @@ El objetivo del despliegue es ejecutar un <code>POST request</code> al endpoint 
 <b>Lógica</b>
 </td>
 <td align="center" width="150">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Canvas_API-orange%3Fstyle%3Dflat-square" alt="Canvas" />
+<img  alt="Canvas" />
 
 
 
@@ -164,5 +164,5 @@ async function getAkureyriPromise(): Promise<string> {
 <!-- FOOTER -->
 
 <div align="center">
-<p><b>Proprietary Software</b></p>
+<p><b>SrBass.dev</b></p>
 <p>Copyright © 2024 - Forever. Todos los derechos reservados.
