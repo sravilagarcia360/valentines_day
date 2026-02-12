@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sorpresa ❄️❤️</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -61,7 +59,6 @@
             background-color: #0f172a; 
         }
 
-        /* --- FONDOS --- */
         .bg-start {
             background: radial-gradient(circle at bottom, #1e293b 0%, #0f172a 100%);
             transition: background 1s ease;
@@ -90,7 +87,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* --- ESTILOS TARJETAS --- */
         .polaroid {
             background: white;
             padding: 1rem 1rem 3rem 1rem;
@@ -98,10 +94,6 @@
             transform: rotate(-2deg);
             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-        }
-        .polaroid:hover {
-            transform: rotate(0deg) scale(1.02);
-            z-index: 10;
         }
         
         .tape {
@@ -128,8 +120,6 @@
         .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* --- BOTONES MEJORADOS --- */
-        
         .btn-aurora {
             background: linear-gradient(90deg, #00ff87 0%, #60efff 50%, #00ff87 100%);
             background-size: 200% auto;
@@ -146,14 +136,9 @@
             transform: scale(1.1) translateY(-2px);
             font-weight: 900;
         }
-        
-        .btn-aurora:active {
-            transform: scale(0.95);
-        }
 
-        /* Botón NO: Cristal Oscuro */
         .btn-no-glass {
-            position: absolute; /* Vital para que pueda moverse libremente */
+            position: absolute;
             z-index: 50;
             background: rgba(15, 23, 42, 0.8); 
             backdrop-filter: blur(8px);
@@ -162,15 +147,8 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             white-space: nowrap;
         }
-        
-        .btn-no-glass:hover {
-            background: rgba(220, 38, 38, 0.3);
-            border-color: rgba(220, 38, 38, 0.5);
-            color: #ffcccc;
-        }
 
         .hidden-section { display: none !important; }
-        .opacity-0-start { opacity: 0; }
         
         #snow-canvas {
             position: absolute;
@@ -187,22 +165,17 @@
         <div class="polaroid rounded-sm bg-white text-center max-h-[75vh] flex flex-col justify-between">
             <div class="tape"></div>
             
-            <!-- Imagen Principal -->
             <div class="bg-gray-100 h-48 md:h-60 rounded-sm mb-4 flex items-center justify-center overflow-hidden border border-gray-200 relative group">
-                 <div id="story-emoji" class="text-8xl md:text-9xl filter drop-shadow-md animate-float transform transition-transform group-hover:scale-110 duration-700 cursor-default">
-                     <!-- Emoji -->
-                 </div>
+                 <div id="story-emoji" class="text-8xl md:text-9xl filter drop-shadow-md animate-float transform transition-transform group-hover:scale-110 duration-700 cursor-default"></div>
                  <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-50"></div>
             </div>
 
             <div class="flex-grow flex flex-col items-center justify-center px-2">
-                <div id="story-content" class="font-hand text-xl md:text-2xl text-gray-800 leading-snug fade-in-up w-full">
-                    <!-- Texto -->
-                </div>
+                <div id="story-content" class="font-hand text-xl md:text-2xl text-gray-800 leading-snug fade-in-up w-full"></div>
             </div>
 
             <div class="absolute bottom-1 right-1 left-1 flex justify-between items-center mt-1 h-12">
-                <span id="page-indicator" class="font-hand text-gray-400 font-bold transition-opacity duration-300">1/7</span>
+                <span id="page-indicator" class="font-hand text-gray-400 font-bold transition-opacity duration-300">1/8</span>
                 <button id="next-btn" class="bg-slate-800 text-white font-modern font-bold py-2 px-6 rounded-full shadow-lg hover:bg-black transition-all active:scale-95 flex items-center gap-2 animate-pulse-slow ml-auto">
                     Siguiente <span class="text-lg">➡️</span>
                 </button>
@@ -210,36 +183,27 @@
         </div>
     </div>
 
-    <!-- FASE 2: PREGUNTA (AURORA) -->
-    <!-- Ajuste aquí: h-auto en lugar de altura fija para ajustarse al contenido, con min-height para el juego -->
+    <!-- FASE 2: PREGUNTA -->
     <div id="question-card" class="hidden-section z-30 w-full max-w-md h-auto min-h-[550px] glass-card rounded-[2rem] flex flex-col items-center justify-center p-8 relative overflow-hidden transition-all duration-500 border-t border-white/40">
-        
         <div class="flex flex-col items-center justify-center w-full relative z-10">
-            
-            <div id="char-wrapper" class="mb-6 opacity-0-start transform transition-all duration-700">
-                <div id="character" class="text-8xl filter drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] animate-float">🏔️</div>
+            <div id="char-wrapper" class="mb-6 opacity-0 transform transition-all duration-700">
+                <div id="character" class="text-8xl filter drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] animate-float">🐧❤️</div>
             </div>
 
-            <div id="title-wrapper" class="opacity-0-start text-center mb-8 w-full px-2">
-                <h3 class="text-aurora-green font-modern font-bold text-sm uppercase tracking-[0.3em] drop-shadow-md mb-2">Bajo el cielo del norte...</h3>
+            <div id="title-wrapper" class="opacity-0 text-center mb-8 w-full px-2">
+                <h3 class="text-aurora-green font-modern font-bold text-sm uppercase tracking-[0.3em] drop-shadow-md mb-2">Después de tanto tiempo...</h3>
                 <h1 class="text-4xl md:text-5xl font-script font-bold text-white drop-shadow-lg leading-tight">
                     ¿Quieres ser mi<br><span class="text-aurora-purple">San Valentín?</span>
                 </h1>
             </div>
 
-            <!-- Botones: Flex container para el SÍ, espacio reservado -->
-            <div id="buttons-area" class="w-full flex flex-col items-center justify-center gap-6 opacity-0-start mb-8">
-                
-                <!-- BOTÓN SÍ (Arriba) -->
+            <div id="buttons-area" class="w-full flex flex-col items-center justify-center gap-6 opacity-0 mb-8">
                 <button id="btnYes" class="btn-aurora font-modern font-black py-4 px-12 rounded-full text-xl z-20 w-full max-w-[300px] tracking-wide uppercase">
-                    ¡SÍ, MI AMOOR! ❄️❤️
+                    ¡SÍ, MI AMOR! ❄️❤️
                 </button>
-                
-                <!-- Espacio vertical para que el diseño no colapse -->
                 <div class="h-12 w-full"></div>
             </div>
             
-            <!-- BOTÓN NO (Abajo - Posición Absoluta controlada por JS) -->
             <button id="btnNo" class="hidden btn-no-glass font-modern font-bold py-2 px-8 rounded-full text-sm">
                 No gracias
             </button>
@@ -248,8 +212,6 @@
                 <p id="drama-text" class="text-white font-hand text-xl drop-shadow-md h-8 transition-all"></p>
             </div>
         </div>
-
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-aurora-green/10 to-transparent pointer-events-none"></div>
     </div>
 
     <!-- FASE 3: ÉXITO -->
@@ -259,18 +221,17 @@
             ¡SÍÍÍÍ!
         </h1>
         <p class="text-lg text-ice-white mb-6 font-hand font-bold leading-relaxed">
-            "Akureyri guarda nuestro secreto,<br>y el futuro guarda nuestra historia."
+            "Por los secretos que compartimos,<br>y por todo lo que está por venir."
         </p>
         <div class="bg-white/10 p-4 rounded-xl border border-white/20 mb-6">
             <p class="text-xs text-aurora-green uppercase tracking-widest font-bold mb-1">Estado</p>
-            <p class="text-white font-modern font-bold text-lg">✨ Juntos por siempre ✨</p>
+            <p class="text-white font-modern font-bold text-lg">✨ Elegirte fue mi mejor decisión ✨</p>
         </div>
         <button onclick="location.reload()" class="text-white/70 hover:text-white font-modern text-sm underline transition-colors">
             Volver a leer
         </button>
     </div>
 
-    <!-- AUDIO -->
     <audio id="dramatic-sound" preload="auto">
         <source src="akureyri.mp4" type="audio/mp4">
     </audio>
@@ -315,17 +276,12 @@
         }
 
         function initSnow() {
-            for (let i = 0; i < 100; i++) {
-                snowflakes.push(new Snowflake());
-            }
+            for (let i = 0; i < 100; i++) snowflakes.push(new Snowflake());
         }
 
         function animateSnow() {
             ctx.clearRect(0, 0, width, height);
-            snowflakes.forEach(flake => {
-                flake.update();
-                flake.draw();
-            });
+            snowflakes.forEach(flake => { flake.update(); flake.draw(); });
             requestAnimationFrame(animateSnow);
         }
 
@@ -335,7 +291,6 @@
         // --- HISTORIA ---
         const storyPages = [
             {
-                // Portada
                 text: "<div class='py-4'><h1 class='font-script text-5xl md:text-6xl text-slate-900 mb-2 leading-tight'>Para la chica</h1><h2 class='font-modern text-xl md:text-2xl text-love-red font-bold tracking-widest uppercase'>Que cambió mi mundo</h2></div>",
                 emoji: "❤️",
                 isCover: true
@@ -373,11 +328,13 @@
         const escapeSequence = [
             { text: "¿En serio? 🤨", emoji: "🤨" },
             { text: "¡Me congelas el alma! ❄️", emoji: "🥶" },
-            { text: "¡No te vayas! 🏃‍♂️", emoji: "😱" },
-            { text: "Mi corazón acaba de hacer 'crack' 💔", emoji: "🥺" },
+            { text: "Mi corazón hizo 'crack' 💔", emoji: "🥺" },
             { text: "¡Llamando a la policía del amor! 👮‍♂️", emoji: "🚓" },
+            { text: "¡No te vayas! 🏃‍♂️", emoji: "😱" },
+            { text: "Billie Eilish no aprobaría esto... 🎵", emoji: "😒" },
             { text: "¡Me voy a vivir con los pingüinos! 🐧", emoji: "👋" },
             { text: "¡Explotaré en 3, 2, 1...! 🌋", emoji: "🤯" },
+            { text: "¿Es por mi peinado, verdad? 💇‍♂️", emoji: "😭" },
             { text: "¡Adiós botón! 👋😈", emoji: "💥" }
         ];
 
@@ -387,17 +344,11 @@
         const storyEmoji = document.getElementById('story-emoji');
         const nextBtn = document.getElementById('next-btn');
         const pageIndicator = document.getElementById('page-indicator');
-        
         const questionCard = document.getElementById('question-card');
-        const titleWrapper = document.getElementById('title-wrapper');
-        const buttonsArea = document.getElementById('buttons-area');
-        const charWrapper = document.getElementById('char-wrapper');
-        const character = document.getElementById('character');
-        
         const btnYes = document.getElementById('btnYes');
         const btnNo = document.getElementById('btnNo');
         const dramaText = document.getElementById('drama-text');
-        
+        const character = document.getElementById('character');
         const successSection = document.getElementById('success-section');
         const audioEffect = document.getElementById('dramatic-sound');
 
@@ -405,208 +356,88 @@
         let escapeCount = 0;
         let isMoving = false;
 
-        updateStory();
-
-        // NAVEGACIÓN
-        nextBtn.addEventListener('click', () => {
-            currentPage++;
-            if (currentPage < storyPages.length) {
-                storyContent.parentElement.classList.add('opacity-0');
-                storyEmoji.classList.add('scale-50', 'opacity-0');
-                setTimeout(() => {
-                    updateStory();
-                    storyContent.parentElement.classList.remove('opacity-0');
-                    storyEmoji.classList.remove('scale-50', 'opacity-0');
-                }, 300);
-            } else {
-                triggerDramaticIntro();
-            }
-        });
-
         function updateStory() {
             const page = storyPages[currentPage];
             storyContent.innerHTML = page.text;
             storyEmoji.innerText = page.emoji;
-            
-            // Lógica de Portada
             if (page.isCover) {
                 pageIndicator.style.opacity = '0';
-                nextBtn.innerHTML = 'Abrir Diario <span class="text-lg">📖</span>';
-                nextBtn.className = "bg-love-red text-white font-modern font-bold py-2 px-8 rounded-full shadow-lg hover:bg-red-600 transition-all active:scale-95 flex items-center gap-2 animate-pulse-slow ml-auto";
+                nextBtn.innerHTML = 'Abrir Diario 📖';
+                nextBtn.className = "bg-love-red text-white font-modern font-bold py-2 px-8 rounded-full shadow-lg hover:bg-red-600 transition-all ml-auto animate-pulse-slow";
             } else {
                 pageIndicator.style.opacity = '1';
-                // Calculamos número real (índice actual, ya que el índice 1 es la página 1)
-                const totalPages = storyPages.length - 1;
-                pageIndicator.innerText = `${currentPage}/${totalPages}`;
-
-                if (currentPage === storyPages.length - 1) {
-                    nextBtn.innerHTML = 'Ver Sorpresa <span class="text-lg">🎁</span>';
-                    nextBtn.className = "bg-rose-500 text-white font-modern font-bold py-2 px-6 rounded-full shadow-lg hover:bg-rose-600 transition-all active:scale-95 flex items-center gap-2 animate-pulse-slow ml-auto";
-                } else {
-                    nextBtn.innerHTML = 'Siguiente <span class="text-lg">➡️</span>';
-                    nextBtn.className = "bg-slate-800 text-white font-modern font-bold py-2 px-6 rounded-full shadow-lg hover:bg-black transition-all active:scale-95 flex items-center gap-2 animate-pulse-slow ml-auto";
-                }
+                pageIndicator.innerText = `${currentPage}/${storyPages.length - 1}`;
+                nextBtn.innerHTML = currentPage === storyPages.length - 1 ? 'Ver Sorpresa 🎁' : 'Siguiente ➡️';
+                nextBtn.className = "bg-slate-800 text-white font-modern font-bold py-2 px-6 rounded-full shadow-lg hover:bg-black transition-all ml-auto";
             }
         }
 
-        // INTRO
-        function triggerDramaticIntro() {
-            try {
-                audioEffect.volume = 1.0;
-                audioEffect.currentTime = 0;
-                audioEffect.play().catch(() => {});
-            } catch(e) {}
+        updateStory();
 
-            storySection.classList.add('opacity-0', 'scale-90', 'transition-all', 'duration-500');
-            
+        nextBtn.addEventListener('click', () => {
+            currentPage++;
+            if (currentPage < storyPages.length) {
+                storyContent.parentElement.classList.add('opacity-0');
+                setTimeout(() => { updateStory(); storyContent.parentElement.classList.remove('opacity-0'); }, 300);
+            } else triggerDramaticIntro();
+        });
+
+        function triggerDramaticIntro() {
+            try { audioEffect.play().catch(() => {}); } catch(e) {}
+            storySection.classList.add('opacity-0', 'scale-90');
             setTimeout(() => {
                 storySection.classList.add('hidden-section');
-                body.className = "bg-aurora h-[100dvh] w-screen flex flex-col items-center justify-center relative select-none p-4 overflow-hidden";
+                body.className = "bg-aurora h-[100dvh] w-screen flex flex-col items-center justify-center relative p-4 overflow-hidden";
                 questionCard.classList.remove('hidden-section');
-
-                setTimeout(() => {
-                    charWrapper.classList.remove('opacity-0-start');
-                    charWrapper.classList.add('fade-in-up');
-                }, 800);
-
-                setTimeout(() => {
-                    titleWrapper.classList.remove('opacity-0-start');
-                    titleWrapper.classList.add('fade-in-up');
-                }, 2000);
-
-                setTimeout(() => {
-                    buttonsArea.classList.remove('opacity-0-start');
-                    buttonsArea.classList.add('fade-in-up');
-                }, 3500);
-
-                // BOTÓN NO APARECE
+                setTimeout(() => document.getElementById('char-wrapper').classList.remove('opacity-0'), 800);
+                setTimeout(() => document.getElementById('title-wrapper').classList.remove('opacity-0'), 2000);
+                setTimeout(() => document.getElementById('buttons-area').classList.remove('opacity-0'), 3500);
                 setTimeout(() => {
                     btnNo.classList.remove('hidden');
-                    // Forzar reflow para que el navegador sepa que existe
-                    void btnNo.offsetWidth;
-                    
                     const cardRect = questionCard.getBoundingClientRect();
-                    const btnYesRect = btnYes.getBoundingClientRect();
-                    const btnNoRect = btnNo.getBoundingClientRect();
-
-                    // CENTRADO HORIZONTALMENTE
-                    const initialX = (cardRect.width / 2) - (btnNoRect.width / 2);
-                    
-                    // POSICIÓN VERTICAL: Justo debajo del botón SÍ
-                    const relativeYesBottom = btnYesRect.bottom - cardRect.top;
-                    const gap = 20;
-                    const initialY = relativeYesBottom + gap;
-
-                    // Aplicar posición inicial sin animación de movimiento
-                    btnNo.style.transition = 'none'; 
-                    btnNo.style.left = `${initialX}px`;
-                    btnNo.style.top = `${initialY}px`;
-                    
-                    // Preparar animación de entrada (fade in)
-                    btnNo.style.opacity = 0;
-                    btnNo.style.transform = 'translateY(15px)';
-                    
-                    // Ejecutar animación en el siguiente frame
-                    requestAnimationFrame(() => {
-                        btnNo.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                        btnNo.style.opacity = 1;
-                        btnNo.style.transform = 'translateY(0)';
-                        
-                        // Una vez que aparece, restauramos la transición para el movimiento "escapista"
-                        setTimeout(() => {
-                            btnNo.style.transition = 'top 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
-                        }, 600);
-                    });
-
+                    btnNo.style.left = `${(cardRect.width/2)-(btnNo.offsetWidth/2)}px`;
+                    btnNo.style.top = `${(btnYes.getBoundingClientRect().bottom - cardRect.top) + 20}px`;
+                    btnNo.style.transition = 'top 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
                 }, 4500);
             }, 500);
         }
 
-        // BOTÓN ESCAPISTA
-        function runAway(e) {
-            if (e && e.type === 'touchstart') e.preventDefault();
-            if (isMoving) return;
-            isMoving = true;
-            setTimeout(() => { isMoving = false; }, 200);
-
-            if (escapeCount >= escapeSequence.length) return;
-
+        function runAway() {
+            if (isMoving || escapeCount >= escapeSequence.length) return;
+            isMoving = true; setTimeout(() => isMoving = false, 200);
             const data = escapeSequence[escapeCount];
             dramaText.innerText = data.text;
             character.innerText = data.emoji;
-
-            // Ajuste robusto de movimiento
-            const parentW = questionCard.offsetWidth;
-            const parentH = questionCard.offsetHeight;
-            const btnW = btnNo.offsetWidth || 100;
-            const btnH = btnNo.offsetHeight || 40;
-            const padding = 20;
-
-            const availableX = parentW - btnW - padding;
-            const availableY = parentH - btnH - padding;
-
-            const newX = Math.max(padding, Math.random() * (availableX - padding) + padding);
-            const newY = Math.max(padding, Math.random() * (availableY - padding) + padding);
-
+            const padding = 30;
+            const newX = Math.random() * (questionCard.offsetWidth - btnNo.offsetWidth - padding*2) + padding;
+            const newY = Math.random() * (questionCard.offsetHeight - btnNo.offsetHeight - padding*2) + padding;
             btnNo.style.left = `${newX}px`;
             btnNo.style.top = `${newY}px`;
-
             escapeCount++;
-
             if (escapeCount === escapeSequence.length) {
-                setTimeout(eliminateNoButton, 500);
+                setTimeout(() => {
+                    btnNo.style.transform = 'scale(0)';
+                    dramaText.innerText = "¡Ups! Solo queda un camino... 😈";
+                    btnYes.innerHTML = "¡SÍ, CLARO QUE SÍ! 😍";
+                }, 500);
             }
         }
 
-        function eliminateNoButton() {
-            btnNo.style.transition = 'all 0.5s ease';
-            btnNo.style.transform = 'scale(0) rotate(180deg)';
-            btnNo.style.opacity = '0';
-            
-            dramaText.innerText = "¡Ups! Solo queda un camino... 😈";
-            character.innerText = "😈";
-            
-            setTimeout(() => {
-                btnNo.style.display = 'none';
-                btnYes.innerHTML = "¡SÍ, CLARO QUE SÍ! 😍";
-                btnYes.classList.add('scale-110', 'animate-pulse');
-            }, 500);
-        }
-
-        btnNo.addEventListener('touchstart', runAway, { passive: false });
         btnNo.addEventListener('mouseover', runAway);
-        
+        btnNo.addEventListener('touchstart', (e) => { e.preventDefault(); runAway(); });
+
         btnYes.addEventListener('click', () => {
-            questionCard.style.transform = 'scale(1.1)';
-            questionCard.style.opacity = '0';
-            setTimeout(() => {
-                questionCard.classList.add('hidden-section');
-                successSection.classList.remove('hidden-section');
-                successSection.classList.add('fade-in-up');
-                
-                setInterval(() => {
-                     const confetti = document.createElement('div');
-                     confetti.innerText = ['❄️', '❤️', '✨', '🇮🇸'][Math.floor(Math.random()*4)];
-                     confetti.style.position = 'fixed';
-                     confetti.style.left = Math.random() * 100 + 'vw';
-                     confetti.style.top = '-50px';
-                     confetti.style.fontSize = Math.random() * 20 + 20 + 'px';
-                     confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
-                     document.body.appendChild(confetti);
-                     setTimeout(() => confetti.remove(), 5000);
-                }, 100);
-                
-                const style = document.createElement('style');
-                style.innerHTML = `@keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }`;
-                document.head.appendChild(style);
-            }, 300);
+            questionCard.classList.add('hidden-section');
+            successSection.classList.remove('hidden-section');
+            setInterval(() => {
+                const conf = document.createElement('div');
+                conf.innerText = ['❄️', '❤️', '✨', '🐧'][Math.floor(Math.random()*4)];
+                conf.style.cssText = `position:fixed; left:${Math.random()*100}vw; top:-50px; animation:fall 3s linear forwards; font-size:30px;`;
+                document.body.appendChild(conf);
+                setTimeout(() => conf.remove(), 3000);
+            }, 100);
         });
     </script>
+    <style>@keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }</style>
 </body>
 </html>
-
-
-
-
-
-
