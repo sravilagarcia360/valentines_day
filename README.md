@@ -1,168 +1,115 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - Sorpresa Romántica: Akureyri Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            background-color: #0f172a;
+            color: #f0faff;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #60efff;
+        }
+        pre {
+            background: #000;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+    <div class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-3xl shadow-2xl">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-aurora-green to-aurora-purple">
+                ❄️ Sorpresa Romántica: Akureyri Edition
+            </h1>
+            <p class="text-lg text-slate-300 leading-relaxed italic">
+                Una experiencia web inmersiva de <strong>Storytelling Digital</strong> diseñada para narrar una historia personal y realizar una propuesta interactiva.
+            </p>
+        </header>
 
-<!-- HEADER -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-aurora-purple mb-6 border-b border-white/10 pb-2">📸 Experiencia de Usuario (UX)</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white/5 p-6 rounded-2xl">
+                    <h3 class="font-bold text-white mb-2">1. El Álbum</h3>
+                    <p class="text-sm text-slate-400">Sistema de diapositivas estilo Polaroid con tipografías manuscritas y emojis dinámicos.</p>
+                </div>
+                <div class="bg-white/5 p-6 rounded-2xl">
+                    <h3 class="font-bold text-white mb-2">2. El Clímax</h3>
+                    <p class="text-sm text-slate-400">Transición dramática a noche ártica con lógica de evasión en el botón "No".</p>
+                </div>
+                <div class="bg-white/5 p-6 rounded-2xl">
+                    <h3 class="font-bold text-white mb-2">3. La Celebración</h3>
+                    <p class="text-sm text-slate-400">Motor de confeti temático y mensaje final tras la confirmación exitosa.</p>
+                </div>
+            </div>
+        </section>
 
-<h1 style="font-size: 3em; margin-bottom: 0;">❄️ PROJECT AKUREYRI</h1>
-<h3 style="color: #60efff; margin-top: 0;">Protocolo de Despliegue Romántico v1.0.0</h3>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-aurora-purple mb-6 border-b border-white/10 pb-2">✨ Características Técnicas</h2>
+            <ul class="space-y-4">
+                <li><strong class="text-aurora-green">Snow Engine (Canvas API):</strong> Sistema de partículas de alto rendimiento para una nevada constante.</li>
+                <li><strong class="text-aurora-green">Aurora Borealis Effect:</strong> Fondo animado mediante gradientes lineares y filtros <code>backdrop-filter</code>.</li>
+                <li><strong class="text-aurora-green">Lógica de Evasión Inteligente:</strong> Reposicionamiento dinámico mediante <code>getBoundingClientRect()</code>.</li>
+                <li><strong class="text-aurora-green">Responsive & Touch Ready:</strong> Optimizado para visualización y gestos en iOS y Android.</li>
+            </ul>
+        </section>
 
-<p align="center" style="max-width: 600px; line-height: 1.6;">
-<i>Una solución <b>Full-Stack</b> de alta disponibilidad para orquestar la propuesta más importante del año.
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-aurora-purple mb-6 border-b border-white/10 pb-2">🏗️ Stack Tecnológico</h2>
+            <div class="flex flex-wrap gap-4">
+                <span class="px-4 py-2 bg-slate-800 rounded-full text-sm">HTML5 / CSS3</span>
+                <span class="px-4 py-2 bg-slate-800 rounded-full text-sm">Tailwind CSS 3.0</span>
+                <span class="px-4 py-2 bg-slate-800 rounded-full text-sm">Vanilla JS (ES6+)</span>
+                <span class="px-4 py-2 bg-slate-800 rounded-full text-sm">Google Fonts</span>
+            </div>
+        </section>
 
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-aurora-purple mb-6 border-b border-white/10 pb-2">🚀 Despliegue Rápido</h2>
+            <ol class="list-decimal list-inside space-y-3 text-slate-300">
+                <li>Sube el archivo <code>index.html</code> a un nuevo repositorio en GitHub.</li>
+                <li>En <code>Settings > Pages</code>, activa la rama <strong>main</strong>.</li>
+                <li>Accede a la URL generada por GitHub Pages.</li>
+            </ol>
+        </section>
 
-
-
-Garantizando la persistencia de recuerdos críticos mediante redundancia geográfica activa.
-
-
-
-
-<b>Madrid ⇄ Akureyri</b></i>
-</p>
-
-<hr style="width: 50%; border: 1px solid #ddd;">
-
-</div>
-
-<!-- ARQUITECTURA -->
-
-<h2 align="center">📡 Arquitectura del Sistema</h2>
-
-<p align="center">
-Project Akureyri es una <i>Single-Page Application (SPA)</i> diseñada para ejecutarse en un entorno de baja latencia: <b>tus emociones</b>. 
-
-
-
-
-El objetivo del despliegue es ejecutar un <code>POST request</code> al endpoint <code>/corazon/tuyo</code> y recibir un código de estado <code>200 OK</code>.
-</p>
-
-<!-- TECH STACK -->
-
-<h2 align="center">🛠️ Stack Tecnológico</h2>
-
-<div align="center">
-<table align="center" style="border: none;">
-<tr>
-<td align="center" width="150">
-<img alt="HTML5" />
-
-
-
-
-<b>Frontend</b>
-</td>
-<td align="center" width="150">
-<img alt="Tailwind" />
-
-
-
-
-<b>Estilos</b>
-</td>
-<td align="center" width="150">
-<img  alt="JS" />
-
-
-
-
-<b>Lógica</b>
-</td>
-<td align="center" width="150">
-<img  alt="Canvas" />
-
-
-
-
-<b>Físicas</b>
-</td>
-</tr>
-</table>
-</div>
-
-<!-- MÓDULOS -->
-
-<h2 align="center">📦 Módulos del Núcleo</h2>
-
-<div align="center">
-<table style="width: 100%; border-collapse: collapse;">
-<tr>
-<td width="50%" valign="top" style="padding: 10px;">
-<h3 align="center">1. StorytellingController.js</h3>
-<p align="center">Controlador que itera sobre metadatos de viaje.</p>
-<pre lang="javascript">
-const memories = [
-{ loc: "Madrid", sentiment: "High" },
-{ loc: "Akureyri", sentiment: "Infinite" }
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-aurora-purple mb-6 border-b border-white/10 pb-2">⚙️ Personalización</h2>
+            <p class="mb-4">Edita el array <code>storyPages</code> en el bloque de JavaScript del index:</p>
+            <pre><code class="text-sm text-aurora-green">
+const storyPages = [
+    { text: "Tu mensaje personalizado", emoji: "❤️" },
+    // Añade o quita páginas según necesites
 ];
-</pre>
-</td>
-<td width="50%" valign="top" style="padding: 10px;">
-<h3 align="center">2. ButtonEvasionModule</h3>
-<p align="center"><i>Middleware</i> defensivo en el botón de rechazo.</p>
-<ul>
-<li><b>Trigger:</b> <code>mouseover</code> | <code>touchstart</code></li>
-<li><b>Action:</b> Recálculo de coordenadas <code>(x, y)</code>.</li>
-<li><b>Fallback:</b> Autodestrucción del elemento.</li>
-</ul>
-</td>
-</tr>
-</table>
-</div>
+            </code></pre>
+        </section>
 
-<!-- INSTRUCCIONES -->
+        <footer class="text-center pt-8 border-t border-white/10">
+            <p class="text-slate-500 text-sm italic">
+                Desarrollado con ❤️ para transformar código en recuerdos.
+            </p>
+            <p class="mt-2 text-xs opacity-50 text-white">Licencia MIT</p>
+        </footer>
 
-<h2 align="center">🚀 Instrucciones de Despliegue</h2>
-
-<div align="center">
-<p>Para ejecutar este artefacto en tu entorno local (tu corazón):</p>
-<pre style="width: 60%;">
-git clone https://www.google.com/search?q=https://github.com/us/forever.git
-cd forever
-npm install amor-incondicional
-</pre>
-</div>
-
-<!-- POEMA / PAYLOAD -->
-
-<h2 align="center">📜 Payload Final</h2>
-
-<div align="center">
-<table style="border: 1px solid #ddd; border-radius: 8px;">
-<tr>
-<td>
-
-async function getAkureyriPromise(): Promise<string> {
-    const context = {
-        location: "North",
-        weather: "Freezing",
-        feeling: "Infinite"
-    };
-
-    if (context.weather === "Freezing") {
-        return `
-        // Ejecutando promesa...
-        En el norte donde el sol se esconde,
-        y el frío quema más que el olvido,
-        dejamos huellas que nadie responde,
-        en un mapa blanco y perdido.
-
-        Akureyri guarda nuestro secreto,
-        un eco de risas y un beso helado,
-        y aunque el destino sea incompleto,
-        tú siempre serás mi viaje soñado.
-        `;
-    }
-    throw new Error("Love not found.");
-}
-
-
-</td>
-</tr>
-</table>
-</div>
-
-<!-- FOOTER -->
-
-<div align="center">
-<p><b>SrAvila.dev</b></p>
-
+    </div>
+</body>
+</html>
